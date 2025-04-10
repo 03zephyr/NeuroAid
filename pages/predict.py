@@ -6,13 +6,13 @@ from utils.llm_integration import generate_llm_response
 import json
 
 # Load the saved model, scaler, and feature names
-scaler = joblib.load(r"model\scaler.joblib")
-stacked_model = joblib.load(r"model\stacked_model.pkl")
-with open(r"model\feature_names.json", "r") as f:
+scaler = joblib.load("model/scaler.joblib")
+stacked_model = joblib.load("model/stacked_model.pkl")
+with open("model/feature_names.json", "r") as f:
     feature_names = json.load(f)
 
 # Load the SHAP explainer (ensure the path is correct)
-explainer_path = r"model\explainer.pkl"
+explainer_path = "model/explainer.pkl"
 
 
 # Streamlit app interface
@@ -73,7 +73,7 @@ if st.button("Submit"):
         
         # Explain prediction using SHAP and generate LLM response
         explanation_text = explain_prediction_with_shap(patient_data, stacked_model, scaler, feature_names)
-        advice = generate_llm_response(explanation_text, prediction, prediction_proba)
+        advice = generate_llm_response(explanation_text, prediction, prediction_proba,patient_data)
         
         # Display explanation and advice
         st.subheader("Explanation & Advice")

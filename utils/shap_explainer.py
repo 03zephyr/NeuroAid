@@ -7,7 +7,7 @@ def explain_prediction_with_shap(patient_data, model, scaler, feature_names):
     patient_df = pd.DataFrame([patient_data], columns=feature_names)
     patient_scaled = scaler.transform(patient_df)
 
-    with open(r"C:\Users\rbham\Desktop\NeuroAid\model\explainer.pkl", "rb") as f:
+    with open("model/explainer.pkl", "rb") as f:
         explainer = joblib.load(f)
 
     # Compute SHAP values for the patient's data

@@ -14,7 +14,7 @@ GROQ_API_KEY = st.secrets["GROQ_API_KEY"]
 client = Groq(api_key=GROQ_API_KEY)
 
 
-def generate_llm_response(explanation_text, prediction, prediction_proba):
+def generate_llm_response(explanation_text, prediction, prediction_proba,patient_data):
     # Define context for Alzheimer's disease
     risk_level = "high risk" if prediction == 1 else "low risk"
     confidence = prediction_proba[prediction]  # Get confidence for the predicted class
@@ -24,6 +24,8 @@ def generate_llm_response(explanation_text, prediction, prediction_proba):
 You are an AI assistant helping explain predictions from a machine learning model designed to assess Alzheimer's disease risk.
 The model predicted a {risk_level} of Alzheimer's disease with a confidence of {confidence:.1%}.
 {explanation_text}
+
+The patient's data is as follows - {patient_data} where MemoryComplaints has a score of 1 or 0 (1 meaning yes and 0 meaning no), BehavioralProblems has a score of 1 or 0 (1 meaning yes and 0 meaning no), ADL has a score of 0-10 where lower values indicate greater impairment, MMSE has a score of 0-30, and FunctionalAssessment has a score of 0-10 where lower values indicate greater impairment.
 
 Please explain this prediction in simple terms suitable for a non-technical audience.
 Additionally, provide actionable lifestyle advice tailored to Alzheimer's disease management based on these feature contributions.
