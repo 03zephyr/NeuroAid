@@ -38,7 +38,7 @@ The patient's data includes:
 
     Functional Assessment (0-10): {patient_data["FunctionalAssessment"]}  (lower values indicate greater impairment)
 
-Please explain this prediction, addressing each feature individually. For each feature:
+Please explain this prediction for a non-technical audience, addressing each feature individually. For each feature:
 1. State how it contributed to the prediction (based on SHAP values).
 2. Explain how the patient's value for that feature compares to typical thresholds.
 
