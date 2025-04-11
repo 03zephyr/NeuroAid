@@ -38,10 +38,9 @@ The patient's data includes:
 
     Functional Assessment (0-10): {patient_data["FunctionalAssessment"]}  (lower values indicate greater impairment)
 
-Please explain this prediction in points, addressing each feature individually. For each feature:
-1. State whether it contributed positively or negatively to the risk (based on SHAP values).
+Please explain this prediction, addressing each feature individually. For each feature:
+1. State how it contributed to the prediction (based on SHAP values).
 2. Explain how the patient's value for that feature compares to typical thresholds.
-3. Provide a simple explanation of why this feature matters for Alzheimer's disease risk.
 
 
 Provide actionable lifestyle advice tailored to Alzheimer's disease management based on these feature contributions. For instance, if ADL is a major contributor, suggest activities to improve daily functioning. If MMSE is low, recommend cognitive stimulation exercises.
