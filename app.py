@@ -5,7 +5,6 @@ from utils.shap_explainer import explain_prediction_with_shap
 from utils.llm_integration import generate_llm_response
 import json
 from PIL import Image
-from streamlit_extras.app_logo import add_logo
 
 st.set_page_config(page_title="NeuroAid", page_icon="🧠")
 
