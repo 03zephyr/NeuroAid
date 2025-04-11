@@ -8,7 +8,7 @@ MODEL = "llama3-70b-8192"
 
 
 # Load API key from Streamlit secrets
-GROQ_API_KEY = st.secrets["GROQ_API_KEY"]
+GROQ_API_KEY = "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"
 
 # Initialize Groq client
 client = Groq(api_key=GROQ_API_KEY)
@@ -27,7 +27,7 @@ The model predicted a {risk_level} of Alzheimer's disease with a confidence of {
 
 The patient's data is as follows - {patient_data} where MemoryComplaints has a score of 1 or 0 (1 meaning yes and 0 meaning no), BehavioralProblems has a score of 1 or 0 (1 meaning yes and 0 meaning no), ADL has a score of 0-10 where lower values indicate greater impairment, MMSE has a score of 0-30, and FunctionalAssessment has a score of 0-10 where lower values indicate greater impairment.
 
-Please explain this prediction in simple terms suitable for a non-technical audience.
+Please explain this prediction in simple terms suitable for a non-technical audience by highlighting the SHAP contributions for each feature.
 Additionally, provide actionable lifestyle advice tailored to Alzheimer's disease management based on these feature contributions.
 Do it consisely, under 600 tokens.
 Do not include any introductory lines like "I'm here to help explain.
