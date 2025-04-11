@@ -43,7 +43,7 @@ Please explain this prediction, addressing each feature individually. For each f
 2. Explain how the patient's value for that feature compares to typical thresholds.
 
 
-Provide actionable lifestyle advice tailored to Alzheimer's disease management based on these feature contributions. For instance, if ADL is a major contributor, suggest activities to improve daily functioning. If MMSE is low, recommend cognitive stimulation exercises.
+Provide actionable lifestyle advice tailored to Alzheimer's disease management based on these feature contributions, with respect to medical guidelines. For instance, if ADL is a major contributor, suggest activities to improve daily functioning. If MMSE is low, recommend cognitive stimulation exercises.
 
 Do it concisely, under 600 tokens.
 Do not include any introductory lines like "I'm here to help explain.
