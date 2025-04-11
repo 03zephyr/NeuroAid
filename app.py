@@ -18,7 +18,6 @@ icon_img = Image.open(icon)
 
 st.logo(icon_img, size="large",icon_image=icon_img)
 
-#st.sidebar.image(logo_image, use_container_width=False)
 
 import streamlit as st
 
