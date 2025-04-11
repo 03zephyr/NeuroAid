@@ -28,17 +28,21 @@ The model predicted a {risk_level} risk of Alzheimer's disease with a confidence
 
 The patient's data includes:
 
-    Memory Complaints (1/0): {patient_data["MemoryComplaints"]}
+    Memory Complaints (1/0): {patient_data["MemoryComplaints"]} (1 means "yes," and 0 means "no")
 
-    Behavioral Problems (1/0): {patient_data["BehavioralProblems"]}
+    Behavioral Problems (1/0): {patient_data["BehavioralProblems"]} (1 means "yes," and 0 means "no")
 
-    ADL (0-10): {patient_data["ADL"]}
+    ADL (0-10): {patient_data["ADL"]}  (lower values indicate greater impairment)
 
-    MMSE (0-30): {patient_data["MMSE"]}
+    MMSE (0-30): {patient_data["MMSE"]} (higher values are better)
 
-    Functional Assessment (0-10): {patient_data["FunctionalAssessment"]}
+    Functional Assessment (0-10): {patient_data["FunctionalAssessment"]}  (lower values indicate greater impairment)
 
-Please explain this prediction in simple terms by highlighting the SHAP contributions for each feature. For example, you might describe how a low ADL score or a low MMSE score impacts risk.
+Please explain this prediction in points, addressing each feature individually. For each feature:
+1. State whether it contributed positively or negatively to the risk (based on SHAP values).
+2. Explain how the patient's value for that feature compares to typical thresholds.
+3. Provide a simple explanation of why this feature matters for Alzheimer's disease risk.
+
 
 Provide actionable lifestyle advice tailored to Alzheimer's disease management based on these feature contributions. For instance, if ADL is a major contributor, suggest activities to improve daily functioning. If MMSE is low, recommend cognitive stimulation exercises.
 
