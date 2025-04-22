@@ -5,10 +5,8 @@ from utils.shap_explainer import explain_prediction_with_shap
 from utils.llm_integration import generate_llm_response
 import json
 from PIL import Image
-from streamlit_extras.app_logo import add_logo
 
 st.set_page_config(page_title="NeuroAid", page_icon="🧠")
-
 
 
 logo_path = "images/logo-removebg-preview.png"  # Replace with your image path
@@ -19,7 +17,6 @@ icon_img = Image.open(icon)
 
 st.logo(icon_img, size="large",icon_image=icon_img)
 
-st.sidebar.image(logo_image, use_container_width=False)
 
 import streamlit as st
 
@@ -27,6 +24,7 @@ import streamlit as st
 # Define navigation pages
 pages = [
     st.Page("pages/predict.py", title="Predict", icon="🔮"),
+    st.Page("pages/MRI_Predict.py", title = "MRI Prediction", icon="📸"),
     st.Page("pages/information.py", title="Information", icon="ℹ️")
 ]
 

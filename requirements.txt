@@ -6,4 +6,7 @@ pandas
 numpy            
 matplotlib          
 groq 
-joblib  
+joblib
+tensorflow
+opencv-python
+Pillow 
