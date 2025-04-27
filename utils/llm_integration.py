@@ -8,7 +8,7 @@ MODEL = "llama3-70b-8192"
 
 
 # Load API key from Streamlit secrets
-GROQ_API_KEY = st.secrets['GROQ_API_KEY']
+GROQ_API_KEY = "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"
 
 # Initialize Groq client
 client = Groq(api_key=GROQ_API_KEY)

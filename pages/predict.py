@@ -30,7 +30,8 @@ patient_data = {}
 memory_complaints = st.radio(
     label="Do you have any Memory Complaints?",
     options=["Yes", "No"],
-    key="memory_complaints"
+    key="memory_complaints",
+    help="Have you noticed any difficulties in remembering things recently?"
 )
 # Update patient_data based on selection
 patient_data["MemoryComplaints"] = 1 if memory_complaints == "Yes" else 0
@@ -39,16 +40,17 @@ patient_data["MemoryComplaints"] = 1 if memory_complaints == "Yes" else 0
 behavioral_problems = st.radio(
     label="Do you have any Behavioral Problems?",
     options=["Yes", "No"],
-    key="behavioral_problems"
+    key="behavioral_problems",
+    help="Have you or others noticed any changes in your behavior, such as increased agitation, anxiety, or withdrawal?"
 )
 # Update patient_data based on selection
 patient_data["BehavioralProblems"] = 1 if behavioral_problems == "Yes" else 0
 
-patient_data["MMSE"] = st.number_input("Enter your MMSE score (0-30):", min_value=0.0, step=0.1)
+patient_data["MMSE"] = st.number_input("Enter your MMSE score (0-30):", min_value=0.0, step=0.1, help="MMSE (Mini-Mental State Examination) is a brief 30-point questionnaire to screen for cognitive impairment.")
 
-patient_data["ADL"] = st.number_input("Enter your ADL score (0-10):", min_value = 0.0,step=0.1)
+patient_data["ADL"] = st.number_input("Enter your ADL score (0-10):", min_value = 0.0,step=0.1, help="ADL (Activities of Daily Living) measures your ability to perform basic self-care tasks. Higher scores mean more independence.")
 
-patient_data["FunctionalAssessment"] = st.number_input("Enter your Functional Assessment score (0-10):", min_value = 0.0,step=0.1)
+patient_data["FunctionalAssessment"] = st.number_input("Enter your Functional Assessment score (0-10):", min_value = 0.0,step=0.1,help="Functional Assessment evaluates your ability to perform daily activities.")
 
 
 # When user clicks "Submit"
