@@ -52,8 +52,8 @@ def overlay_gradcam(pil_img, heatmap, alpha=0.4):
 
 
 st.title("NeuroAid 🧠")
-st.markdown(f"### Alzheimer's MRI Prediction with Grad-CAM Explanation")
-st.write("Upload an MRI image to predict Alzheimer's and see which regions influenced the model's decision.")
+st.markdown(f"### Alzheimer's Disease MRI Prediction with Grad-CAM Visualization")
+st.write("Upload an MRI image to predict and see which regions influenced the model's decision.")
 
 uploaded_file = st.file_uploader("Upload an MRI image", type=["jpg", "jpeg", "png"])
 

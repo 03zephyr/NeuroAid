@@ -38,7 +38,7 @@ The patient's data includes:
 
     Functional Assessment (0-10): {patient_data["FunctionalAssessment"]}
 
-Please explain this prediction in simple terms by highlighting the SHAP contributions for each feature. For example, you might describe how a low ADL score or a low MMSE score impacts risk.
+Please explain this prediction in simple terms by highlighting the SHAP contributions for each feature (You need to mention it's a SHAP score). For example, you might describe how a low ADL score or a low MMSE score impacts risk using SHAP.
 
 Provide actionable lifestyle advice tailored to Alzheimer's disease management based on these feature contributions. For instance, if ADL is a major contributor, suggest activities to improve daily functioning. If MMSE is low, recommend cognitive stimulation exercises.
 

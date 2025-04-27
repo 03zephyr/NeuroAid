@@ -9,6 +9,7 @@ from PIL import Image
 st.set_page_config(page_title="NeuroAid", page_icon="🧠")
 
 
+
 logo_path = "images/logo-removebg-preview.png"  # Replace with your image path
 logo_image = Image.open(logo_path)
 
@@ -23,13 +24,14 @@ import streamlit as st
 
 # Define navigation pages
 pages = [
+    st.Page("pages/home.py", title="Home", icon="🏠"),
     st.Page("pages/predict.py", title="Predict", icon="🔮"),
     st.Page("pages/MRI_Predict.py", title = "MRI Prediction", icon="📸"),
-    st.Page("pages/information.py", title="Information", icon="ℹ️")
+    st.Page("pages/about.py", title="About", icon="ℹ️")
 ]
 
 # Create the navigation menu in the sidebar
-pg = st.navigation(pages, position="sidebar", expanded=True)
+pg = st.navigation(pages, position="sidebar", expanded=False)
 
 # Run the selected page
 pg.run()
