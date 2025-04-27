@@ -8,5 +8,5 @@ matplotlib
 groq 
 joblib
 tensorflow
-opencv-python
+opencv-python-headless
 Pillow 

@@ -65,19 +65,21 @@ if st.button("Submit"):
         prediction_proba = stacked_model.predict_proba(patient_scaled)[0]
         
         # Display prediction results to the user
-        st.subheader("Prediction Results")
+        st.markdown("#### Prediction Results")
         if prediction == 1:
             st.write(f"The model predicts a high risk of Alzheimer's disease (Confidence: {prediction_proba[1]:.1%}).")
         else:
             st.write(f"The model predicts a low risk of Alzheimer's disease (Confidence: {prediction_proba[0]:.1%}).")
         
+        st.markdown("#### Explanation & Advice")
         # Explain prediction using SHAP and generate LLM response
-        explanation_text = explain_prediction_with_shap(patient_data, stacked_model, scaler, feature_names)
-        advice = generate_llm_response(explanation_text, prediction, prediction_proba,patient_data)
-        
-        # Display explanation and advice
-        st.subheader("Explanation & Advice")
-        st.write(advice)
+        with st.spinner('Generating...'):
+            explanation_text = explain_prediction_with_shap(patient_data, stacked_model, scaler, feature_names)
+            advice = generate_llm_response(explanation_text, prediction, prediction_proba,patient_data)
+            
+            # Display explanation and advice
+            
+            st.write(advice)
     
     except Exception as e:
         st.error(f"An error occurred: {str(e)}")
