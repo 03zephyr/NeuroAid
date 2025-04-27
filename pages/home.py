@@ -18,7 +18,7 @@ if st.button("🔮 Predict",help = "Estimate your Alzheimer's risk with a quick,
 if st.button("📸 MRI Prediction", help = "Get a diagnosis of your MRI scan, with visual explanations."):
     st.switch_page("pages/MRI_Predict.py")
 
-if st.button("ℹ️ Information", help = "Learn about the features used in prediction, how the AI works, and tips for brain health."):
+if st.button("ℹ️ About", help = "Learn about the features used in prediction, how the AI works, and tips for brain health."):
     st.switch_page("pages/information.py")
 
 
